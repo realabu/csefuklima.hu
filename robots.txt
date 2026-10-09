@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://realabu.github.io/csefuklima.hu/sitemap.xml

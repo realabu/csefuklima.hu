@@ -1,29 +1,42 @@
 # Csefu Klíma
 
-Statikus, reszponzív magyar bemutatkozó és készülékérdeklődési weboldal.
+Statikus, reszponzív magyar weboldal, külső build vagy szerver nélkül.
 
-## Felépítés
+Publikus oldal: https://realabu.github.io/csefuklima.hu/
 
-- `index.html`: véglegesnek javasolt magyar webszöveg, szolgáltatások, készülékek, bemutatkozás, gyakori kérdések, kapcsolat.
-- `style.css`: mobilra, tabletre és asztali képernyőre optimalizált arculat.
-- `script.js`: mobilmenü, készülékszűrés, készülékválasztás, SMS-előkészítés és Messengerhez másolható érdeklődés.
-- `assets/otthon.webp`: AI-val készített illusztratív hangulatkép, nem kivitelezési referencia.
-- `docs/piaci-attekintes.md`: források, piaci tanulságok és az ellenőrzés határai.
+## Tartalom
 
-Nincs csomagtelepítés vagy build. Helyi megtekintés: `python -m http.server 8080`.
+- Főoldal: szolgáltatások, C&H választások, gondos kivitelezés, kapcsolat.
+- `keszulekek/`: kereshető és szűrhető katalógus, 165 külön készülékváltozat saját statikus adatlapjával.
+- `gondos-klimaszereles/`: telepítési szemlélet és ajánlat-összehasonlítási segítség.
+- `klima-futesre/`: téli választási szempontok.
+- `klimatisztitas/`: karbantartás és a meglévő Google Forms időpontfoglaló.
+- `data/catalog.json`: 2026-10-09-én ellenőrzött gyártói adatok, források és helyi termékfotók.
 
-## Közzététel
+A katalógus a magyar C&H oldal lakossági, ipari és hőszivattyús kínálatát foglalja össze. A külön színek és teljesítmények külön oldalt kaptak. Arctic Plus esetén a gyártói oldal közös családoldalt és teljesítményválasztót közöl; az ott megadott négy teljesítménynek külön oldal készült, kitalált típuskód nélkül.
 
-GitHub Pages: `main` ág, `/ (root)` könyvtár. A `.nojekyll` fájl közvetlen statikus kiszolgálást tesz lehetővé. A saját domainhez nincs CNAME megadva; a csefuklima.hu DNS-beállításait ez a kiadás nem változtatja.
+## Karbantartás
+
+A katalógus JSON módosítása után futtassa:
+
+```sh
+python tools/build_catalog.py
+```
+
+A script csak a helyi adatokat használja, függőség és hálózati kérés nélkül. Újrafogalmazza a termékoldalakat, katalógust, három landingoldalt, sitemapet és a főoldali kiemeléseket. Típus törlésekor a már nem szükséges HTML-fájlt is törölni kell. A főoldal többi szövege közvetlenül az `index.html` fájlban módosítható. A közös megjelenés és viselkedés a `style.css` és `script.js` fájlban található.
 
 ## Kapcsolatfelvétel
 
-Az oldal nem küld szerveroldali űrlapot. A látogató saját SMS-alkalmazásában küldi el az előkészített üzenetet, vagy kimásolja és a Facebook-oldalnak küldi. Az oldal nem tárolja a mezők tartalmát. Nincs analitika, reklámsüti, külső font vagy beágyazott Facebook-követés.
+- Messenger: `https://m.me/csefuklima`, a vállalkozás oldalának postaládája, nem ellenőrizetlen személyes profil.
+- Telefon: +36 30 884 2875, az új hivatalos Csefu-oldal alapján. Asztali böngészőben másolás; mobiltelefonon hívásindítás.
+- E-mail: csefuklima@gmail.com.
+- Az érdeklődési mezők az üzenetet a vágólapra készítik elő. Küldés csak a látogató saját alkalmazásában történik; az oldal nem tárolja az adatokat.
+- SMS csak mobiltelefonon jelenik meg, a helyes új számra címezve.
+- A Google Forms klímatisztítás-időpontfoglaló, nem általános ajánlatkérő. Beágyazása csak külön kattintásra töltődik be.
+- Az oldalon nincs Meta Pixel, Google Analytics vagy reklámkövetés.
 
-A termékek korábbi nyilvános Csefu-munkákban szereplő családok. Nincs készlet-, ár- vagy konkrét jótállási ígéret; az aktuális modell és az értékesítés feltételei egyeztetendők. A kW-adatok a korábbi posztokból származnak.
+## Publikálás
 
-## Frissítés
+GitHub Pages: `main` ág, repository gyökérmappa. A `.nojekyll` fájl megmarad. A hirdetési céloldalak a fenti útvonalakon közvetlenül használhatók. A `sitemap.xml` Pages-címeit egy saját domain bevezetésekor frissíteni kell.
 
-A telefonszám az `index.html` és `script.js` fájlokban szerepel. Készülékcsaládot, teljesítményt és leírást az `index.html` készülékkártyáiban lehet módosítani. A `data-power` értéke a szűrőt vezérli, a `data-product` az érdeklődési szöveget.
-
-Minden további termékadatot a konkrét, aktuális gyártói adatlap alapján kell feltölteni. Nyilvántartási adatok, szerelői minősítések, referenciafotók és tulajdonosi portré csak igazolt adatból kerüljön az oldalra.
+A nyitókép illusztráció; a termékfotók a gyártói katalógusból származnak. Valós munkaképekhez továbbra is a Csefu Facebook-oldala kapcsolódik. Nem szerepel kitalált értékelés, megtakarítás, készletinformáció vagy hatósági minősítés.
