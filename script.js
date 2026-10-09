@@ -56,7 +56,7 @@ if (topic) {
   if (product) { selectProduct(product.slice(0,250)); topic.value = 'Készülékvásárlás'; }
   document.querySelector('#clear-product').addEventListener('click', () => selectProduct(''));
   document.querySelectorAll('[data-interest]').forEach(link => link.addEventListener('click', () => { selectProduct(''); topic.value = link.dataset.interest; }));
-  topic.addEventListener('change', () => { if (topic.value !== 'Készülékvásárlás') selectProduct(''); });
+  topic.addEventListener('change', () => { if (topic.value !== 'Készülékvásárlás') selectProduct(''); document.querySelector('#send-options').hidden = true; status.textContent = ''; });
   function inquiryText() {
     const place = document.querySelector('#place').value.trim();
     const message = document.querySelector('#message').value.trim();

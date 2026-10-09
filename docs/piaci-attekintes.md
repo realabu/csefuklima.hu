@@ -24,13 +24,13 @@ https://www.chklima.hu/hoszivattyuk
 
 A kategóriák teljes termékszámát ellenőriztük, a lapozott oldalfali multi (27) és fan-coil (19) listák további oldalait is feldolgoztuk. A 162 gyártói termékbejegyzésből az Arctic Plus négy teljesítményváltozatának különválasztásával 165 adatlap készült:
 
-- Split klímák: 57 változat, köztük Arctic, Arctic Plus, Vital, Vital Plus, Daytona, Supreme, Supreme Continental, Majesty, Nature és konzol.
+- Split klímák: 55 változat, köztük Arctic, Arctic Plus, Vital, Vital Plus, Daytona, Supreme, Supreme Continental, Majesty, Nature és konzol.
 - Multi egységek: 45.
 - Levegő–víz hőszivattyúk: 28.
 - Fan-coilok: 19.
 - Ipari klímák: 10.
 - Párátlanítók: 3.
-- Szellőztetők: 3.
+- Szellőztetők: 5.
 
 Minden adatlap saját gyártói forrást tartalmaz. A teljesítményeket és garanciajelöléseket nem általánosítottuk a család minden modelljére. A garancia mindig feltételekhez és előzetes egyeztetéshez kötve szerepel. Az energiaosztályoknál a forrás nyers jelölését közöljük, feltételezett hűtés/fűtés sorrend nélkül, mert a forrásnál éghajlati/mérési eltérések és egyes nem egyértelmű párosítások is vannak. SCOP alapján nem készül megtakarítási ígéret. Arctic Plusnál nincs kitalált modellazonosító; a családleírás és az ott megadott teljesítményválasztó a forrás.
 
@@ -59,3 +59,5 @@ A `tel:` kezelőt az operációs rendszer választja. Asztali gépen ezért tele
 - `/klimatisztitas/`: karbantartás és meglévő időpontkérő.
 
 Nyomkövető kódot nem telepítettünk. Meta/Google kampányok megjelenítése, költségkeret vagy konverziómérés beállítása nem része ennek a módosításnak.
+
+Az importőri Nature kategóriában két CH-HRV030S szellőztető is szerepel; ezeket a saját katalógus a funkciójuk szerint a szellőztetők közé helyezi. A modelljelölés a termék címéből származik; az ettől eltérő webáruházi készletkódot a JSON külön `catalogCode` mezője őrzi. Az új Csefu-oldal klímatisztítási videójára a karbantartási oldal hivatkozik.
